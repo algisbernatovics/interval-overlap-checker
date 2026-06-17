@@ -1,10 +1,10 @@
 # Interval Overlap Checker
 
-A PHP exercise that detects whether date or numeric intervals overlap.
+A compact PHP exercise for detecting whether intervals overlap.
 
-## Overview
+## Learning Goal
 
-A PHP exercise that detects whether date or numeric intervals overlap.
+Practice boundary-condition reasoning, small class design, and test coverage for a focused algorithm.
 
 ## Features
 
@@ -12,31 +12,38 @@ A PHP exercise that detects whether date or numeric intervals overlap.
 - Includes PHPUnit tests for expected cases.
 - Keeps the implementation small enough to inspect quickly.
 
+## Complexity
+
+- Time: `O(1)` for a single interval comparison.
+- Space: `O(1)`.
+
+## Example
+
+Two intervals overlap when each interval starts before the other one ends:
+
+```text
+[1, 5] and [4, 8] => overlap
+[1, 3] and [4, 8] => no overlap
+```
+
 ## Tech Stack
 
 - PHP
 - Composer
 - PHPUnit
 
-## Project Structure
-
-- `app/Overlap.php` - overlap detection logic
-- `tests/TestOverlap.php` - test suite
-
-## Getting Started
-
-Install dependencies and run tests:
+## Run
 
 ```bash
 composer install
 vendor/bin/phpunit
 ```
 
-## Portfolio Notes
+## Project Structure
 
-- Shows boundary-condition reasoning in a compact PHP class.
-- Useful example of pairing a simple algorithm with tests.
+- `app/Overlap.php` - overlap detection logic
+- `tests/TestOverlap.php` - test suite
 
-## Status
+## License
 
-Portfolio-ready coding exercise.
+MIT License. See [LICENSE](./LICENSE).
